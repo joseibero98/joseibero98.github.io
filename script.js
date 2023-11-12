@@ -1,18 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     var secciones = document.getElementsByClassName('seccion');
+    var menu = document.getElementById('menu');
 
     for (var i = 1; i < secciones.length; i++) {
         secciones[i].style.display = 'none';
     }
-
-    document.getElementById('menu').addEventListener('click', function(event) {
-        event.preventDefault();
-        
-        if (event.target.tagName === 'A') {
-            var targetId = event.target.getAttribute('href').substring(1);
-            mostrarSeccion(targetId);
-        }
-    });
 
     function mostrarSeccion(id) {
         for (var i = 0; i < secciones.length; i++) {
@@ -20,5 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         document.getElementById(id).style.display = 'block';
+        cerrarMenu();
     }
+
+    window.toggleMenu = function() {
+        menu.classList.toggle('show');
+    };
+
+    function cerrarMenu() {
+        menu.classList.remove('show');
+    }
+
+    window.onclick = function(event) {
+        if (!event.target.matches('.menu-icon') && !event.target.matches('.bar')) {
+            cerrarMenu();
+        }
+    };
 });
