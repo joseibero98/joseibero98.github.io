@@ -1,18 +1,18 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f0f0;
+    background-color: #f8f8f8; /* Fondo más claro */
     color: #333;
 }
 
 header {
-    background-color: #1a1a1a;
+    background-color: #3498db; /* Azul claro para el encabezado */
     color: #fff;
     text-align: center;
     padding: 20px;
 }
 
 nav {
-    background-color: #333;
+    background-color: #5dade2; /* Azul claro para la barra de navegación */
 }
 
 nav ul {
@@ -37,7 +37,7 @@ section {
 }
 
 footer {
-    background-color: #1a1a1a;
+    background-color: #3498db; /* Azul claro para el pie de página */
     color: #fff;
     text-align: center;
     padding: 10px;
