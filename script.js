@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function() {
         secciones[i].style.display = 'none';
     }
 
+    window.toggleMenu = function() {
+        $(menu).slideToggle();
+    };
+
     function mostrarSeccion(id) {
         for (var i = 0; i < secciones.length; i++) {
             secciones[i].style.display = 'none';
@@ -15,12 +19,10 @@ document.addEventListener('DOMContentLoaded', function() {
         cerrarMenu();
     }
 
-    window.toggleMenu = function() {
-        menu.classList.toggle('show');
-    };
-
     function cerrarMenu() {
-        menu.classList.remove('show');
+        if ($(menu).is(':visible')) {
+            $(menu).slideToggle();
+        }
     }
 
     window.onclick = function(event) {
