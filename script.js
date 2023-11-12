@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('menu').addEventListener('click', function(event) {
+        event.preventDefault();
+        
         if (event.target.tagName === 'A') {
             var targetId = event.target.getAttribute('href').substring(1);
             mostrarSeccion(targetId);
