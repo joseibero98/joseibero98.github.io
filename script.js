@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     window.onclick = function(event) {
-        if (!event.target.matches('.menu-icon') && !event.target.matches('.bar') && !event.target.matches('.menu')) {
+        if (!event.target.matches('.menu-icon') && !event.target.matches('.bar')) {
             cerrarMenu();
         }
     };
